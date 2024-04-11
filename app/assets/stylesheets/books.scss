@@ -1,3 +1,40 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.index {
+  margin-bottom: 30px;
+}
+
+table {
+  margin: 7px;
+}
+
+td {
+  padding: 7px 5px;
+}
+
+.error {
+  border: solid 1px red;
+}
+
+.error-title {
+  padding: 5px;
+  color: white;
+  background-color: red;
+}
+
+ul {
+  margin: 30px;
+}
+
+.books {
+  margin: 10px;
+}
+
+.show {
+  margin:20px;
+}
+
+.show-text {
+  margin: 25px 0 ;
+}

@@ -1,4 +1,5 @@
-<h1>Books</h1>
+<div class="index">
+  <h1>Books</h1>
 
   <table>
     <thead>
@@ -18,27 +19,38 @@
       <% end %>
     </tbody>
   </table>
+</div>
 
-<h2>New book</h2>
+<div class="new">
+  <h2>New book</h2>
 
-<% if @book.errors.any? %>
-  <%= @book.errors.count %> errors prohibited this book from being saved:
-  <ul>
-    <% @book.errors.full_messages.each do |message| %>
+  <% if @book.errors.any? %>
+  <div class="error">
+    <h5 class="error-title"><%= @book.errors.count %> errors prohibited this book from being saved:</h5>
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
       <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
 
-<%= form_with model: @book, url: '/books', method: :post do |f| %>
-  <h4>Title</h4>
-  <%= f.text_field :title %>
+  <%= form_with model: @book, url: '/books', method: :post do |f| %>
+    <div class="books">
+      <h4>Title</h4>
+      <%= f.text_field :title %>
+    </div>
+
+    <div class="books">
+      <h4>Body</h4>
+      <%= f.text_area :body %>
+    </div>
   
-  <h4>Body</h4>
-  <%= f.text_area :body %>
-  
-  <%= f.submit 'Create Book' %>
-<% end %>
+    <div class="books">
+      <%= f.submit 'Create Book' %>
+    </div>
+  <% end %>
+</div>
 
 
 
